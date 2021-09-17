@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.assessment.mapper.OtherFileMapper">
+  <resultMap id="BaseResultMap" type="com.assessment.pojo.OtherFile">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="file_number" jdbcType="BIGINT" property="fileNumber" />
+    <result column="file_name" jdbcType="VARCHAR" property="fileName" />
+    <result column="file_status" jdbcType="INTEGER" property="fileStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="project_id" jdbcType="VARCHAR" property="projectId" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.assessment.pojo.OtherFile">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="file_number" jdbcType="BIGINT" property="fileNumber" />
+    <result column="file_name" jdbcType="VARCHAR" property="fileName" />
+    <result column="file_status" jdbcType="INTEGER" property="fileStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="project_id" jdbcType="VARCHAR" property="projectId" />
+  </resultMap>
+</mapper>
