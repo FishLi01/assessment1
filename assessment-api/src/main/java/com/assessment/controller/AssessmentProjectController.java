@@ -31,7 +31,7 @@ public class AssessmentProjectController{
         assessmentProject.setProjectStatus(0);
         assessmentProject.setCreateTime(new Date());
         assessmentProject.setAmountReceived(BigDecimal.valueOf(0));
-        assessmentProject.setOutstandingAmount(assessmentProject.getAmountReceivable());
+        assessmentProject.setOutstandingAmount(assessmentProject.getAmountReceivable().subtract(assessmentProject.getAmountReceived()));
         assessmentProjectService.saveAssProject(assessmentProject);
         return IMoocJSONResult.ok();
     }

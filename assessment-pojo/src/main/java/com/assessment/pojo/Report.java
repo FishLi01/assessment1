@@ -1,45 +1,56 @@
 package com.assessment.pojo;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.util.Date;
 import javax.persistence.*;
 
+@ApiModel(value = "项目报告对象",description = "项目报告对象")
 public class Report {
+    @ApiModelProperty(hidden = true)
     @Id
     private String id;
 
     /**
      * 报告编号
      */
+    @ApiModelProperty(hidden = true)
     @Column(name = "report_number")
     private Long reportNumber;
 
     /**
      * 报告名称
      */
+    @ApiModelProperty(value = "报告名称",name = "reportName",example = "报告名称",required = true)
     @Column(name = "report_name")
     private String reportName;
 
     /**
      * 状态 0:上传 1:待审核 2:审核中 3:归档 4:退回 5:作废 6:完成
      */
+    @ApiModelProperty(hidden = true)
     @Column(name = "report_status")
     private Integer reportStatus;
 
     /**
      * 创建时间
      */
+    @ApiModelProperty(hidden = true)
     @Column(name = "create_time")
     private Date createTime;
 
     /**
      * 创建报告用户ID
      */
+    @ApiModelProperty(value = "创建报告用户id",name = "userId",example = "创建报告用户id",required = true)
     @Column(name = "user_id")
     private String userId;
 
     /**
      * 项目ID
      */
+    @ApiModelProperty(value = "项目id",name = "projectId",example = "项目id",required = true)
     @Column(name = "project_id")
     private String projectId;
 

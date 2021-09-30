@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.assessment.mapper.ContractMapper">
+    <resultMap id="BaseResultMap" type="com.assessment.pojo.Contract">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="contract_number" jdbcType="BIGINT" property="contractNumber" />
+        <result column="contract_name" jdbcType="VARCHAR" property="contractName" />
+        <result column="contract_money" jdbcType="DECIMAL" property="contractMoney" />
+        <result column="contract_copies" jdbcType="INTEGER" property="contractCopies" />
+        <result column="contract_status" jdbcType="INTEGER" property="contractStatus" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="signature_time" jdbcType="TIMESTAMP" property="signatureTime" />
+        <result column="archive_time" jdbcType="TIMESTAMP" property="archiveTime" />
+        <result column="verifier_id" jdbcType="VARCHAR" property="verifierId" />
+        <result column="user_id" jdbcType="VARCHAR" property="userId" />
+        <result column="project_id" jdbcType="VARCHAR" property="projectId" />
+        <result column="remark" jdbcType="VARCHAR" property="remark" />
+        <result column="contract_file" jdbcType="VARCHAR" property="contractFile" />
+    </resultMap>
+</mapper>

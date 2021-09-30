@@ -1,67 +1,81 @@
 package com.assessment.pojo;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.math.BigDecimal;
 import javax.persistence.*;
-
+@ApiModel(value = "发票对象",description = "发票对象")
 public class Invoice {
+    @ApiModelProperty(hidden = true)
     @Id
     private String id;
 
     /**
      * 发票编号
      */
+    @ApiModelProperty(hidden = true)
     @Column(name = "invoice_number")
     private Long invoiceNumber;
 
     /**
      * 单位名称
      */
+    @ApiModelProperty(value = "单位名称",name = "buyer",example = "单位名称",required = true)
     private String buyer;
 
     /**
      * 纳税人识别号
      */
+    @ApiModelProperty(value = "纳税人识别号",name = "taxpayer",example = "纳税人识别号",required = true)
     private String taxpayer;
 
     /**
      * 电话及地址
      */
+    @ApiModelProperty(value = "电话及地址",name = "addressTelephone",example = "电话及地址",required = true)
     @Column(name = "address_telephone")
     private String addressTelephone;
 
     /**
      * 开户行及银行账号
      */
+    @ApiModelProperty(value = "开户行及银行账号",name = "depositBank",example = "开户行及银行账号",required = true)
     @Column(name = "deposit_bank")
     private String depositBank;
 
     /**
      * 发票类型 0:普通发票 1:专用发票
      */
+    @ApiModelProperty(value = "发票类型 0:普通发票 1:专用发票",name = "invoiceType",example = "发票类型 0:普通发票 1:专用发票",required = true)
     @Column(name = "invoice_type")
     private Integer invoiceType;
 
     /**
      * 发票金额
      */
+    @ApiModelProperty(value = "发票金额",name = "invoiceMoney",example = "发票金额",required = true)
     @Column(name = "invoice_money")
     private BigDecimal invoiceMoney;
 
     /**
      * 状态 0:上传 1:待审核 2:审核中 3:开票 4:退回 5:作废 6:完成
      */
+    @ApiModelProperty(hidden = true)
     @Column(name = "invoice_status")
     private Integer invoiceStatus;
 
     /**
      * 创建发票用户ID
      */
+    @ApiModelProperty(value = "创建发票用户ID",name = "userId",example = "创建发票用户ID",required = true)
     @Column(name = "user_id")
     private String userId;
 
     /**
      * 项目ID
      */
+    @ApiModelProperty(value = "项目ID",name = "projectId",example = "项目ID",required = true)
     @Column(name = "project_id")
     private String projectId;
 
